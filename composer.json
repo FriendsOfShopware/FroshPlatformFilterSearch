@@ -1,0 +1,34 @@
+{
+    "name": "frosh/platform-filter-search",
+    "description": "This plugin inserts a search input above the filter options in the listing.",
+    "type": "shopware-platform-plugin",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "FriendsOfShopware",
+            "homepage": "https://friendsofshopware.de"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FroshPlatformFilterSearch\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "FroshPlatformFilterSearch\\FroshPlatformFilterSearch",
+        "copyright": "FriendsOfShopware",
+        "label": {
+          "de-DE": "Filter Suche",
+          "en-GB": "Filter search"
+        },
+        "description": {
+            "de-DE": "Dieses Plugin fügt eine Suche über den Filter Optionen ein.",
+            "en-GB": "This plugin inserts a search input above the filter options in the listing."
+        }
+    }
+}
