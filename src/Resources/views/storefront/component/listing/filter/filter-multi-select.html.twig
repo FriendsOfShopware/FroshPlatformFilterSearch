@@ -1,8 +1,8 @@
 {% sw_extends '@Storefront/storefront/component/listing/filter/filter-multi-select.html.twig' %}
 
 {% block component_filter_multi_select_list %}
-    <div style="padding: 5px 15px;">
-        <input type="text" class="form-control" placeholder="Suchen..."/>
+    <div class="fpfs-wrapper" style="padding: 5px 15px;">
+        <input type="text" class="form-control" placeholder="Suchen..." data-frosh-platform-filter-search="true" />
     </div>
 
     {{ parent() }}
