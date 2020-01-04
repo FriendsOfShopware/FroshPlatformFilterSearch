@@ -1,9 +1,10 @@
 import Plugin from 'src/plugin-system/plugin.class';
+import DomAccess from 'src/helper/dom-access.helper';
+import Iterator from 'src/helper/iterator.helper';
 
 export default class FroshPlatformSearchFilterPlugin extends Plugin {
     static options = {
-        optionListSizeTrigger: 10,
-        dropdownSelector: '#filter-panel-wrapper .dropdown',
+        dropdownSelector: '.filter-panel-items-container .dropdown',
     };
 
     init() {
@@ -17,25 +18,27 @@ export default class FroshPlatformSearchFilterPlugin extends Plugin {
 
     _onInput(event) {
         const value = event.target.value;
+        const dropdown = event.target.closest('.filter-multi-select-dropdown');
 
-        const listItems = event.target
-            .closest('.filter-multi-select-dropdown')
-            .querySelector('.filter-multi-select-list')
-            .querySelectorAll('li');
+        const list = DomAccess.querySelector(dropdown, '.filter-multi-select-list');
+        const listItems = DomAccess.querySelectorAll(list, 'li');
+        const listItemsArray = Array.from(listItems);
 
-        const listArray = Array.from(listItems);
-
-        listArray.forEach(item => {
-            item.style.display = 'none';
-            const label = item.querySelector('.filter-multi-select-item-label').innerHTML.trim().toLowerCase();
+        Iterator.iterate(listItemsArray, listItem => {
+            listItem.style.display = 'none';
+            const labelElement = DomAccess.querySelector(listItem, '.filter-multi-select-item-label');
+            const label = labelElement.innerHTML.trim().toLowerCase();
 
             if (label.includes(value)) {
-                item.style.display = 'list-item';
+                listItem.style.display = 'list-item';
             }
         });
     }
 
     _onDropdownShown(event) {
-        event.relatedTarget.closest('.dropdown').querySelector('[data-frosh-platform-filter-search=true]').focus();
+        const dropdown = event.relatedTarget.closest('.dropdown');
+        const filterInput = DomAccess.querySelector(dropdown, '[data-frosh-platform-filter-search=true]');
+
+        filterInput.focus();
     }
 }
