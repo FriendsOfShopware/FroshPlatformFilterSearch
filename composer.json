@@ -2,7 +2,7 @@
     "name": "frosh/platform-filter-search",
     "description": "This plugin inserts a search input above the filter options in the listing.",
     "type": "shopware-platform-plugin",
-    "version": "v1.0.0",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "FriendsOfShopware",
