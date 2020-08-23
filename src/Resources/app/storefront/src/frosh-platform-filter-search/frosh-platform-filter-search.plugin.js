@@ -37,7 +37,11 @@ export default class FroshPlatformSearchFilterPlugin extends Plugin {
 
     _onDropdownShown(event) {
         const dropdown = event.relatedTarget.closest('.dropdown');
-        const filterInput = DomAccess.querySelector(dropdown, '[data-frosh-platform-filter-search=true]');
+        const filterInput = DomAccess.querySelector(dropdown, '[data-frosh-platform-filter-search=true]', false);
+
+        if (!filterInput) {
+            return;
+        }
 
         filterInput.focus({
             preventScroll: true
