@@ -1,9 +1,15 @@
 {% sw_extends '@Storefront/storefront/component/listing/filter/filter-multi-select.html.twig' %}
 
 {% block component_filter_multi_select_list %}
-    <div class="fpfs-wrapper" style="padding: 5px 15px;">
-        <input type="text" class="form-control" placeholder="{{ "frosh-platform-filter-search.placeholder"|trans }}" data-frosh-platform-filter-search="true" />
-    </div>
+    {% if elements|length >= shopware.config.FroshPlatformFilterSearch.config.MinItems %}
+        <div class="fpfs-wrapper" style="padding: 5px 15px;">
+            <input aria-label="{{ "frosh-platform-filter-search.placeholder"|trans }}"
+                   type="text" class="form-control"
+                   placeholder="{{ "frosh-platform-filter-search.placeholder"|trans }}"
+                   data-frosh-platform-filter-search="true"
+            />
+        </div>
+    {% endif %}
 
     {{ parent() }}
 {% endblock %}
