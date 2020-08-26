@@ -29,6 +29,14 @@
         "description": {
             "de-DE": "Dieses Plugin fügt eine Suche über den Filter Optionen ein.",
             "en-GB": "This plugin inserts a search input above the filter options in the listing."
+        },
+        "manufacturerLink": {
+          "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformFilterSearch",
+          "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformFilterSearch"
+        },
+        "supportLink": {
+          "de-DE": "https://github.com/FriendsOfShopware/FroshPlatformFilterSearch/issues",
+          "en-GB": "https://github.com/FriendsOfShopware/FroshPlatformFilterSearch/issues"
         }
     }
 }
