@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "shopware/core": "*",
-        "shopware/storefront": "*"
+        "shopware/core": "~6.2.3|~6.3",
+        "shopware/storefront": "~6.2.3|~6.3"
     },
     "license": "MIT",
     "autoload": {
