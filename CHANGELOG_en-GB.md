@@ -1,3 +1,9 @@
+# 1.0.2
+
+* Define label for the filter search
+* Add setting for minimum quantity in filter before search is displayed
+* Add missing translations
+
 # 1.0.1
 
 * Improve UX when opening filters

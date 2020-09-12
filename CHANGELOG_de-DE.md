@@ -1,3 +1,9 @@
+# 1.0.2
+
+* Definiere Label für die Filter-Suche
+* Füge Einstellung für Mindestmenge in Filter hinzu, bevor Suche angezeigt wird
+* Füge fehlende Übersetzungen hinzu
+
 # 1.0.1
 
 * Verbessere UX beim Öffnen von Filtern
