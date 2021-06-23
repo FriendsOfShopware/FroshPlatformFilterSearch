@@ -27,7 +27,7 @@
           "en-GB": "Filter search"
         },
         "description": {
-            "de-DE": "Das Plugin fügt ein Suchfeld über die Filter Optionen ein. Damit können die Optionen gefiltert werden. Eine Mindestanzahl kann konfiguriert werden.",
+            "de-DE": "Dieses Plugin fügt ein Suchfeld über die Filter Optionen ein. Damit können die Optionen gefiltert werden. Eine Mindestanzahl kann konfiguriert werden.",
             "en-GB": "This plugin inserts a search input above the filter options. This field is visible if the configured value is bigger than the count of the filter options."
         },
         "manufacturerLink": {
