@@ -5,6 +5,20 @@
     ],
     "standardLocale": "en_GB",
     "localizations": ["de_DE","en_GB","fr_FR","nl_NL","es_ES","it_IT"],
+    "categories": [
+      "ConversionOptimierung",
+      "MenueKategorien"
+    ],
     "productType": "extension",
-    "responsive": true
+    "responsive": true,
+    "tags": {
+      "en": [
+        "conversion",
+        "listing"
+      ],
+      "de": [
+        "conversion",
+        "listing"
+      ]
+    }
 }
