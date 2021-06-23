@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Support für Shopware 6.4
+
 # 1.0.2
 
 * Definiere Label für die Filter-Suche
