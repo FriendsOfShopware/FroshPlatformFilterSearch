@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/component/listing/filter/filter-multi-select.html.twig' %}
 
 {% block component_filter_multi_select_list %}
-    {% if elements|length >= config(FroshPlatformFilterSearch.config.MinItems) %}
+    {% if elements|length >= config('FroshPlatformFilterSearch.config.MinItems') %}
         <div class="fpfs-wrapper">
             <input aria-label="{{ "frosh-platform-filter-search.placeholder"|trans }}"
                    type="text" class="form-control"
