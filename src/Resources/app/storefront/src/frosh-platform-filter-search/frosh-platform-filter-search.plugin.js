@@ -43,6 +43,11 @@ export default class FroshPlatformSearchFilterPlugin extends Plugin {
             return;
         }
 
+        const dropdownMenu = DomAccess.querySelector(dropdown, '.dropdown-menu', false);
+        if (dropdownMenu) {
+            dropdownMenu.classList.add('fpfs-dropdown-is--expanded');
+        }
+
         filterInput.focus({
             preventScroll: true
         });
