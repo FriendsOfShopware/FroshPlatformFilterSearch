@@ -1,3 +1,7 @@
+# 1.0.4
+
+* Vergrößere Höhe von ausgeklappten Filtern
+
 # 1.0.3
 
 * Support für Shopware 6.4
