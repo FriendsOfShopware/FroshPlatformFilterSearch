@@ -6,7 +6,7 @@ This plugin inserts a search input above the filter options in the listing.
 
 ## Requirements
 
-- Shopware Version 6.1 or higher
+- Shopware Version 6.4 or higher
 
 ## Installation
 
