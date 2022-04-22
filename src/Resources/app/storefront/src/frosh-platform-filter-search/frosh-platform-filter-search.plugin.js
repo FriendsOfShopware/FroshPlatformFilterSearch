@@ -13,7 +13,17 @@ export default class FroshPlatformSearchFilterPlugin extends Plugin {
 
     _registerEvents() {
         this.el.addEventListener('input', this._onInput.bind(this));
-        $(this.options.dropdownSelector).on('shown.bs.dropdown', this._onDropdownShown.bind(this));
+        
+        if (Feature.isActive('V6_5_0_0')) {
+            const dropdowns = DomAccess.querySelectorAll(document, this.options.dropdownSelector, false);
+            if(dropdowns) {
+                dropdowns.forEach((dropdown) => {
+                    dropdown.addEventListener('shown.bs.dropdown', this._onDropdownShown.bind(this));
+                });
+            }
+        } else {
+            $(this.options.dropdownSelector).on('shown.bs.dropdown', this._onDropdownShown.bind(this));
+        }
     }
 
     _onInput(event) {
