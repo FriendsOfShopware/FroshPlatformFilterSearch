@@ -1,3 +1,7 @@
+# 2.0.0
+
+* Support for Shopware 6.5
+
 # 1.0.4
 
 * Increase height of expanded filters
