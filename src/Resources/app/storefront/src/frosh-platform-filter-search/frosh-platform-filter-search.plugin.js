@@ -1,6 +1,6 @@
-import Plugin from 'src/plugin-system/plugin.class';
-import DomAccess from 'src/helper/dom-access.helper';
-import Iterator from 'src/helper/iterator.helper';
+import Plugin from '../../Storefront/plugin-system/plugin.class.js';
+import DomAccess from '../../Storefront/helper/dom-access.helper.js';
+import Iterator from '../../Storefront/helper/iterator.helper.js';
 
 export default class FroshPlatformSearchFilterPlugin extends Plugin {
     static options = {
@@ -13,16 +13,12 @@ export default class FroshPlatformSearchFilterPlugin extends Plugin {
 
     _registerEvents() {
         this.el.addEventListener('input', this._onInput.bind(this));
-        
-        if (Feature.isActive('V6_5_0_0')) {
-            const dropdowns = DomAccess.querySelectorAll(document, this.options.dropdownSelector, false);
-            if(dropdowns) {
-                dropdowns.forEach((dropdown) => {
-                    dropdown.addEventListener('shown.bs.dropdown', this._onDropdownShown.bind(this));
-                });
-            }
-        } else {
-            $(this.options.dropdownSelector).on('shown.bs.dropdown', this._onDropdownShown.bind(this));
+
+        const dropdowns = DomAccess.querySelectorAll(document, this.options.dropdownSelector, false);
+        if(dropdowns) {
+            dropdowns.forEach((dropdown) => {
+                dropdown.addEventListener('shown.bs.dropdown', this._onDropdownShown.bind(this));
+            });
         }
     }
 

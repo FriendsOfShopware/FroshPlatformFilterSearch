@@ -1,0 +1,11 @@
+{
+  "resolve": {
+    "FroshPlatformFilterSearch": {
+      "type": "local",
+      "path": "src"
+    }
+  },
+  "entryPoints": [
+    "FroshPlatformFilterSearch/main.js"
+  ]
+}
