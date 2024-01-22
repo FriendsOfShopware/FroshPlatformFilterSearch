@@ -99,3 +99,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+/src/Resources/app/storefront/dist
+node_modules

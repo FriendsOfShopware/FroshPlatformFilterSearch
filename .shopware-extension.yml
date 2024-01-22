@@ -1,0 +1,4 @@
+build:
+  zip:
+    assets:
+      enable_es_build_for_storefront: true
