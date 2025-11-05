@@ -27,18 +27,15 @@ export default class FroshPlatformSearchFilterPlugin extends window.PluginBaseCl
         const dropdown = event.target.closest('.filter-multi-select-dropdown');
 
         const list = dropdown.querySelector('.filter-multi-select-list');
+        const listClone = list.cloneNode(true) as HTMLElement;
+        list.replaceWith(listClone);
         const listItems = list.querySelectorAll('li');
-        const listItemsArray = Array.from(listItems);
-
-        for (const listItem of listItemsArray) {
-            listItem.style.display = 'none';
+        listItems.forEach((listItem) => {
             const labelElement = listItem.querySelector( '.filter-multi-select-item-label') as HTMLLabelElement;
             const label = labelElement.innerText.trim().toLowerCase();
-
-            if (label.includes(value)) {
-                listItem.style.display = null;
-            }
-        }
+            listItem.style.display = label.includes(value) ? null : 'none';
+        });
+        listClone.replaceWith(list);
     }
 
     _onDropdownShown(event) {
